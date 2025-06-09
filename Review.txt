@@ -1,0 +1,13 @@
+Scratch Terminal Training Summary
+
+I completed the Scratch training focused on Make, Shell, Git, and basic coding principles.
+
+I began by building and running a Makefile that compiled a simple C program using dependencies and targets. I added a clean target to remove generated files and verified that everything worked correctly. I also created a README to explain the project structure and usage.
+
+In the Shell section, I practiced basic commands like cd, ls, mkdir, cp, and mv, along with redirection using >, >>, and pipes. I wrote a simple shell script called test.sh, made it executable, and ran it using bash.
+
+I explored file permissions using chmod, used wc, grep, and sort, and added aliases to my .bashrc file for quick command access.
+
+Finally, I initialized a Git repository for my training folder and committed all relevant files, including the Makefile, source code, script, and this review summary.
+
+This session helped me get more comfortable with the terminal and using make effectively for automating simple builds.
