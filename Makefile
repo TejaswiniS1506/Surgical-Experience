@@ -1,17 +1,16 @@
 all:
 	echo "Hello, World"
 
-
-blah: blah.o
-	cc blah.o -o blah # Runs third
-
-blah.o: blah.c
-	cc -c blah.c -o blah.o # Runs second
-
-# Typically blah.c would already exist, but I want to limit any additional required files
-blah.c:
-	echo "int main() { return 0; }" > blah.c # Runs first 
-
-
 clean:
 	rm -f blah blah.o blah.c
+
+clean_data:
+	python tasks/medicare_data/clean_data.py
+
+# Rule for generic "major_procedure_extract_<year>.csv"
+tasks/medicare_data/output/major_procedure_extract_%.csv:
+	python tasks/medicare_data/major_procedure_extract.py $*
+
+# Rule for alternative naming like "medicare_data_<year>_cleaned.csv"
+tasks/medicare_data/output/medicare_data_%_cleaned.csv:
+	python tasks/medicare_data/major_procedure_extract.py $*
